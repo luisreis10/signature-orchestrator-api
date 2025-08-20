@@ -60,13 +60,23 @@ app.get('/admin/login', (_, res) => {
     'account_write:account',
     'user_login:account'
   ];
+
+  // monta o scope no formato aceito: separados por "+"
+  const scopeParam = SCOPES.join('+');
+
+  // constroi a URL final
   const url = `${AUTH_BASE}/public/oauth/v2?` +
-    `redirect_uri=${encodeURIComponent(REDIRECT_URI)}`+
-    `&response_type=code`+
-    `&client_id=${CLIENT_ID}`+
-    `&scope=${encodeURIComponent(SCOPES.join('+'))}`;
+    `response_type=code` +
+    `&client_id=${encodeURIComponent(CLIENT_ID)}` +
+    `&redirect_uri=${encodeURIComponent(REDIRECT_URI)}` +
+    `&scope=${scopeParam}`;
+
+  // loga no console pra debug
+  console.log('[Adobe OAuth URL]', url);
+
   res.redirect(url);
 });
+
 
 
 
