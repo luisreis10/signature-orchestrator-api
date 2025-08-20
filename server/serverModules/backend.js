@@ -61,10 +61,10 @@ app.get('/admin/login', (_, res) => {
     'user_login:account'
   ];
   const url = `${AUTH_BASE}/public/oauth/v2?` +
-    `redirect_uri=${encodeURIComponent(REDIRECT_URI)}` +
-    `&response_type=code` +
-    `&client_id=${CLIENT_ID}` +
-    `&scope=${encodeURIComponent(SCOPES.join(' '))}`;
+    `redirect_uri=${encodeURIComponent(REDIRECT_URI)}`+
+    `&response_type=code`+
+    `&client_id=${CLIENT_ID}`+
+    `&scope=${encodeURIComponent(SCOPES.join('+'))}`;
   res.redirect(url);
 });
 
