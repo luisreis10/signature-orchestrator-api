@@ -4,7 +4,7 @@ const axios = require('axios');
 require('dotenv').config();
 const logger = require('../serverModules/logger');
 
-const API_BASE = 'https://api.na4.adobesign.com';
+const API_BASE = 'https://api.eu1.adobesign.com';
 const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
 
