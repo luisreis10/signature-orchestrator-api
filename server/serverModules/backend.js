@@ -45,8 +45,8 @@ const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const NGROK_HOST = 'https://signature-orchestrator-api-1.onrender.com';
 const REDIRECT_URI = `${NGROK_HOST}/admin/callback`;
-const API_BASE = 'https://api.na4.adobesign.com';
-const AUTH_BASE = 'https://secure.na4.adobesign.com';
+const API_BASE = 'https://api.eu1.adobesign.com';
+const AUTH_BASE = 'https://secure.eu1.adobesign.com';
 const crypto = require('crypto');
 
 // === Admin Routes for OAuth Flow ===
